@@ -1,0 +1,13 @@
+.revealParent {
+    overflow: hidden;
+    position: relative;
+    margin-block: 5px;
+}
+
+.revealOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    z-index: 3;
+}
