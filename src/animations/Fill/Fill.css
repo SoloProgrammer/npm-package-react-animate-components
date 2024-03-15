@@ -1,0 +1,16 @@
+.fillParent {
+    overflow: hidden;
+    width: fit-content !important;
+    position: relative;
+}
+
+.invisiblePaper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    background: var(--overlay-color);
+    transition-duration: calc(var(--duration)*1s);
+    transition-delay: calc(var(--delay)*1s);
+    z-index: 3;
+}
