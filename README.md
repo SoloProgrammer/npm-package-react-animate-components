@@ -72,6 +72,10 @@ const App = () => {
   animateOnce?: true | false;
   delay?: number;
   duration?: number;
+  animateFrom?: true | false;
+  from: "left" | "right";
+  left: number;
+  right: number;
 ```
 
 <h1>Props defination</h1>
@@ -93,16 +97,18 @@ const App = () => {
 
 `delay` <code style="color : fuchsia">?</code>: Delay for the animation in number starts will be count in seconds
 
-`animateFrom` <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Fill</code> component which controls the direction from where the the component should start fill animation accepts only 2 values: __"left"__ or __"right"__ and default is set to __"left"__ fill animation will begin from __"left"__ direction
+`animateFrom` <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Fill</code> component which controls the direction from where the the component should start fill animation accepts only 2 values: **"left"** or **"right"** and default is set to **"left"** fill animation will begin from **"left"** direction
 
-`from`: Special prop for <code style="color : cyan">SlideIn</code> component initiate slide animation either from __"left"__ or __"right"__ from the below two props one of the prop is <code style="color : red">required*</code> when from value is given!
-- `left` <code style="color : lightskyblue">when from = "left"</code> : Initial position of component from left value should a __positive number__
-- `right` <code style="color : lightskyblue">when from = "right"</code> : Initial position of component from right value should a __positive number__
+`from`: Special prop for <code style="color : cyan">SlideIn</code> component initiate slide animation either from **"left"** or **"right"** from the below two props one of the prop is <code style="color : red">required\*</code> when from value is given!
+
+- `left` <code style="color : lightskyblue">when from = "left"</code> : Initial position of component from left value should a **positive number**
+- `right` <code style="color : lightskyblue">when from = "right"</code> : Initial position of component from right value should a **positive number**
 
 `type`: Special prop for <code style="color : cyan">SlideIn</code> component accepts any one value from the below ones!
 
 - `tween`: Gaves fade effect while sliding in
-- `spring`: Gaves stretchy/springy animation effect while sliding in 
+- `spring`: Gaves stretchy/springy animation effect while sliding in
+
 ## Happy hacking
 
 ## 🚀 Follow author
