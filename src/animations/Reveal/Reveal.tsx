@@ -6,7 +6,6 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { anim } from "../../utils/framer";
 import "./Reveal.css";
 import { RevealProps } from "../../types/types";
-import { SlideIn } from "../SlideIn/SlideIn";
 
 const Reveal = ({
   children,
@@ -52,7 +51,7 @@ const Reveal = ({
       left: "100%",
       transition: {
         duration: 1,
-        delay: 0.25,
+        delay: (0.25 - delay) * -1,
       },
     },
   };
@@ -63,7 +62,11 @@ const Reveal = ({
         viewport={{ once: animateOnce }}
         {...anim(curtainAnimate)}
         className="revealOverlay"
-        style={{ "--overlay-color": overlayBg } as CSSProperties}
+        style={
+          {
+            "--overlay-color": overlayBg,
+          } as CSSProperties
+        }
       />
       <motion.div
         {...anim(slideUpAnimate)}
