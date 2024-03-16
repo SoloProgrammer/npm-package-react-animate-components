@@ -60,7 +60,7 @@ const App = () => {
 <h1>Result</h1>
 
 <div align="center">
- <img src="https://s6.ezgif.com/tmp/ezgif-6-f4f5a19c52.gif"/>
+ <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710614736%2Fowsg5apovixvgqlqr5mj.gif&w=1920&q=75"/>
 </div>
 
 <h1>Common Props</h1>
