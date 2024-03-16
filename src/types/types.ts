@@ -11,6 +11,7 @@ type animateProps = {
 
 export type RevealProps = animateProps;
 export type FillProps = animateProps & { animateFrom?: "right" | "left" };
+export type FadeInProps = Omit<animateProps, "overlayBg">;
 
 type LeftProps = {
   from: "left";

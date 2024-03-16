@@ -1,6 +1,6 @@
-# react-animate-components
+# react-animate-components-ts
 
-Fill your simply looking webistes with awesome animations with react-animate-components 🚀
+Fill your simply looking webistes with awesome animations with react-animate-components-ts 🚀
 Easy to use animation component library where you can find tons of animation components in the upcoming versions of this package for now we introduced some incredible animation components or wrappers that animate components of your page smoothly with an eye caching transitions!
 
 <div align="center">
@@ -36,10 +36,10 @@ yarn add use-axios-http-requests-ts
 `App.jsx`
 
 ```tsx
-import { Fill, Reveal, SlideIn } from "react-animate-components";
+import { Fill, Reveal, SlideIn } from "react-animate-components-ts";
 
 const App = () => {
- // not the entrire code this exmaple only shows the animation added to the text or comoponent which are wrapped with the components that comes from react-animate-components package imported above!
+ // not the entrire code this exmaple only shows the animation added to the text or comoponent which are wrapped with the components that comes from react-animate-components-ts package imported above!
  return (
       <Reveal overlayBg={"var(--main-color)"} delay={0.5}>
         <b>One stop&nbsp;platform,</b>
@@ -82,32 +82,35 @@ const App = () => {
 
 <code style="color : fuchsia">?</code> **indicates not required or optional property**
 
-`children`: Your component to animate should wrapped around react-animate-components
+1. `children`: Your component to animate should wrapped around react-animate-components-ts
 
-`overlayBg`: background color for <code style="color : cyan">Fill</code> & <code style="color : cyan">Reveal</code> components
+2. `overlayBg`: background color for <code style="color : cyan">Fill</code> & <code style="color : cyan">Reveal</code> components
 
-- <code style="color : cyan">Fill</code>: overlayBg or background-color should match the background of the parent component to get the fill animation effect
-- <code style="color : cyan">Reveal</code>: overlayBg or background-color should not match the background of the parent component to see the reveal animation effect
+     + <code style="color : cyan">Fill</code>: overlayBg or background-color should match the background of the parent component to get the fill animation effect
+     
+     + <code style="color : cyan">Reveal</code>: overlayBg or background-color should not match the background of the parent component to see the reveal animation effect
 
-`revealInView` <code style="color : fuchsia">?</code>: By providing true to this prop indicates animation should starts when only the component visible in the view and for false animation will takes places regardless of the component visibility in the viewport - default value is set to `true`
+3. `revealInView` <code style="color : fuchsia">?</code>: By providing true to this prop indicates animation should starts when only the component visible in the view and for false animation will takes places regardless of the component visibility in the viewport - default value is set to `true`
 
-`animateOnce` <code style="color : fuchsia">?</code>: This property controls when the animation should occasionally trigger when set to true the component will animate everytime when it comes into viewport and if false the component will animate once when it is being first time visible in viewport **Note** this prop is only acceptable when `revealInView` prop is set to **true**
+4. `animateOnce` <code style="color : fuchsia">?</code>: This property controls when the animation should occasionally trigger when set to true the component will animate everytime when it comes into viewport and if false the component will animate once when it is being first time visible in viewport **Note** this prop is only acceptable when `revealInView` prop is set to **true**
 
-`duration` <code style="color : fuchsia">?</code>: Duration of animation in number will be count in seconds
+5. `duration` <code style="color : fuchsia">?</code>: Duration of animation in number will be count in seconds
 
-`delay` <code style="color : fuchsia">?</code>: Delay for the animation in number starts will be count in seconds
+6. `delay` <code style="color : fuchsia">?</code>: Delay for the animation in number starts will be count in seconds
 
-`animateFrom` <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Fill</code> component which controls the direction from where the the component should start fill animation accepts only 2 values: **"left"** or **"right"** and default is set to **"left"** fill animation will begin from **"left"** direction
+7. `animateFrom` <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Fill</code> component which controls the direction from where the the component should start fill animation accepts only 2 values: **"left"** or **"right"** and default is set to **"left"** fill animation will begin from **"left"** direction
 
-`from`: Special prop for <code style="color : cyan">SlideIn</code> component initiate slide animation either from **"left"** or **"right"** from the below two props one of the prop is <code style="color : red">required\*</code> when from value is given!
+8. `from`: Special prop for <code style="color : cyan">SlideIn</code> component initiate slide animation either from **"left"** or **"right"** from the below two props one of the prop is <code style="color : red">required\*</code> when from value is given!
 
-- `left` <code style="color : lightskyblue">when from = "left"</code> : Initial position of component from left value should a **positive number**
-- `right` <code style="color : lightskyblue">when from = "right"</code> : Initial position of component from right value should a **positive number**
+   - `left` <code style="color : lightskyblue">when from = "left"</code> : Initial position of component from left value should a **positive number**
+   
+   - `right` <code style="color : lightskyblue">when from = "right"</code> : Initial position of component from right value should a **positive number**
 
-`type`: Special prop for <code style="color : cyan">SlideIn</code> component accepts any one value from the below ones!
+9. `type`: Special prop for <code style="color : cyan">SlideIn</code> component accepts any one value from the below ones!
 
-- `tween`: Gaves fade effect while sliding in
-- `spring`: Gaves stretchy/springy animation effect while sliding in
+   - `tween`: Gaves fade effect while sliding in
+
+   - `spring`: Gaves stretchy/springy animation effect while sliding in
 
 ## Happy hacking
 

@@ -51,7 +51,7 @@ const Reveal = ({
       left: "100%",
       transition: {
         duration: 1,
-        delay: (0.25 - delay) * -1,
+        delay,
       },
     },
   };

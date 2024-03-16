@@ -1,7 +1,7 @@
 {
-  "name": "react-animate-components",
-  "version": "1.0.0",
-  "description": "",
+  "name": "react-animate-components-ts",
+  "version": "1.0.1",
+  "description": "React Animation components library",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -30,5 +30,9 @@
   },
   "dependencies": {
     "framer-motion": "^11.0.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoloProgrammer/npm-package-react-animate-components"
   }
 }
