@@ -9,11 +9,12 @@ import { FillProps } from "../../types/types";
 
 const Fill = ({
   children,
+  overlayBg,
   delay = 0,
   duration = 1,
-  overlayBg,
   animateOnce = true,
   revealInView = true,
+  animateFrom = "left",
 }: FillProps) => {
   const ref = useRef(null);
   const isInview = useInView(ref, { once: animateOnce });
@@ -21,13 +22,13 @@ const Fill = ({
 
   const fillAnimate = {
     initial: {
-      right: 0,
+      left: 0,
     },
     animate: {
-      right: "-100%",
+      left: animateFrom === "left" ? "100%" : "-100%",
       transition: { ease: ["linear"] },
     },
-    exit: { right: 0 },
+    exit: { left: 0 },
   };
 
   useEffect(() => {

@@ -10,4 +10,24 @@ type animateProps = {
 };
 
 export type RevealProps = animateProps;
-export type FillProps = animateProps;
+export type FillProps = animateProps & { animateFrom?: "right" | "left" };
+
+type LeftProps = {
+  from: "left";
+  left: number;
+};
+type RightProps = {
+  from: "right";
+  right: number;
+};
+type TweenProps = {
+  type: "tween";
+  duration?: number;
+};
+type SpringProps = {
+  type: "spring";
+};
+
+export type SlideInProps = Omit<animateProps, "overlayBg" | "duration"> &
+  (TweenProps | SpringProps) &
+  (LeftProps | RightProps);

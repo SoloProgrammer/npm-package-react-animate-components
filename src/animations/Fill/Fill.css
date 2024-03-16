@@ -9,6 +9,7 @@
     height: 100%;
     width: 100%;
     right: 0;
+    left: 0;
     background: var(--overlay-color);
     transition-duration: calc(var(--duration)*1s);
     transition-delay: calc(var(--delay)*1s);

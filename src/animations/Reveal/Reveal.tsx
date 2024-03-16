@@ -6,6 +6,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { anim } from "../../utils/framer";
 import "./Reveal.css";
 import { RevealProps } from "../../types/types";
+import { SlideIn } from "../SlideIn/SlideIn";
 
 const Reveal = ({
   children,
