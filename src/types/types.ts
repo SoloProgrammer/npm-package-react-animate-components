@@ -12,6 +12,23 @@ type animateProps = {
 export type RevealProps = animateProps;
 export type FillProps = animateProps & { animateFrom?: "right" | "left" };
 export type FadeInProps = Omit<animateProps, "overlayBg">;
+export type PopProps = Omit<animateProps, "overlayBg"> & {
+  origin?:
+    | "center"
+    | "bottom"
+    | "top"
+    | "left"
+    | "right"
+    | "bottom left"
+    | "bottom right"
+    | "bottom center"
+    | "top left"
+    | "top right"
+    | "top center"
+    | "left center"
+    | "right center"
+    | `${number} ${number}`;
+};
 
 type LeftProps = {
   from: "left";

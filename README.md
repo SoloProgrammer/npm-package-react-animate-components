@@ -63,7 +63,16 @@ const App = () => {
  <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710614736%2Fowsg5apovixvgqlqr5mj.gif&w=1920&q=75"/>
 </div>
 
-<h1>Common Props</h1>
+## Also comes with
+
+```tsx
+  <FadeIn/>
+  <Pop/>
+```
+
+<hr/>
+
+<h1>All Props</h1>
 
 ```ts
   children: React.ReactNode;
@@ -73,44 +82,55 @@ const App = () => {
   delay?: number;
   duration?: number;
   animateFrom?: true | false;
-  from: "left" | "right";
+  from: string;
   left: number;
   right: number;
+  type: string
+  origin: string
 ```
 
 <h1>Props defination</h1>
 
 <code style="color : fuchsia">?</code> **indicates not required or optional property**
 
-1. `children`: Your component to animate should wrapped around react-animate-components-ts
+1. **`children`**: Your component to animate should wrapped around react-animate-components-ts
 
-2. `overlayBg`: background color for <code style="color : cyan">Fill</code> & <code style="color : cyan">Reveal</code> components
+2. **`overlayBg`**: background color for <code style="color : cyan">Fill</code> & <code style="color : cyan">Reveal</code> components
 
-     + <code style="color : cyan">Fill</code>: overlayBg or background-color should match the background of the parent component to get the fill animation effect
-     
-     + <code style="color : cyan">Reveal</code>: overlayBg or background-color should not match the background of the parent component to see the reveal animation effect
+   - <code style="color : cyan">Fill</code>: overlayBg or background-color should match the background of the parent component to get the fill animation effect
 
-3. `revealInView` <code style="color : fuchsia">?</code>: By providing true to this prop indicates animation should starts when only the component visible in the view and for false animation will takes places regardless of the component visibility in the viewport - default value is set to `true`
+   - <code style="color : cyan">Reveal</code>: overlayBg or background-color should not match the background of the parent component to see the reveal animation effect
 
-4. `animateOnce` <code style="color : fuchsia">?</code>: This property controls when the animation should occasionally trigger when set to true the component will animate everytime when it comes into viewport and if false the component will animate once when it is being first time visible in viewport **Note** this prop is only acceptable when `revealInView` prop is set to **true**
+3. **`revealInView`** <code style="color : fuchsia">?</code>: By providing true to this prop indicates animation should starts when only the component visible in the view and for false animation will takes places regardless of the component visibility in the viewport - default value is set to `true`
 
-5. `duration` <code style="color : fuchsia">?</code>: Duration of animation in number will be count in seconds
+4. **`animateOnce`** <code style="color : fuchsia">?</code>: This property controls when the animation should occasionally trigger when set to true the component will animate everytime when it comes into viewport and if false the component will animate once when it is being first time visible in viewport **Note** this prop is only acceptable when `revealInView` prop is set to **true**
 
-6. `delay` <code style="color : fuchsia">?</code>: Delay for the animation in number starts will be count in seconds
+5. **`duration`** <code style="color : fuchsia">?</code>: Duration of animation in number will be count in seconds
 
-7. `animateFrom` <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Fill</code> component which controls the direction from where the the component should start fill animation accepts only 2 values: **"left"** or **"right"** and default is set to **"left"** fill animation will begin from **"left"** direction
+6. **`delay`** <code style="color : fuchsia">?</code>: Delay for the animation in number starts will be count in seconds
 
-8. `from`: Special prop for <code style="color : cyan">SlideIn</code> component initiate slide animation either from **"left"** or **"right"** from the below two props one of the prop is <code style="color : red">required\*</code> when from value is given!
+7. **`animateFrom`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Fill</code> component which controls the direction from where the the component should start fill animation accepts only 2 values: **"left"** or **"right"** and default is set to **"left"** fill animation will begin from **"left"** direction
+
+8. **`from`**: Special prop for <code style="color : cyan">SlideIn</code> component initiate slide animation either from **"left"** or **"right"** from the below two props one of the prop is <code style="color : red">required\*</code> when from value is given!
 
    - `left` <code style="color : lightskyblue">when from = "left"</code> : Initial position of component from left value should a **positive number**
-   
+
    - `right` <code style="color : lightskyblue">when from = "right"</code> : Initial position of component from right value should a **positive number**
 
-9. `type`: Special prop for <code style="color : cyan">SlideIn</code> component accepts any one value from the below ones!
+9. **`type`**: Special prop for <code style="color : cyan">SlideIn</code> component accepts any one value from the below ones!
 
    - `tween`: Gaves fade effect while sliding in
 
    - `spring`: Gaves stretchy/springy animation effect while sliding in
+
+10. **`origin`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">Pop</code> component to set the origin of Pop animation!
+
+    - ```ts
+      Predifined values: "center" | "bottom" | "top" | "left" | "right" | "bottom left" | "bottom right" | "bottom center" | "top left" | "top right" | "top center" | "left center" | "right center" | `${number} ${number}`;
+      ```
+    - where `${number} ${number}`: sepcifies customs values you can pass to set the origin of the element that will animate or pop For Eg: `0% 50%`
+
+    - When you pass a custom value like `0% 50%` to origin prop, it means you are specifying the X and Y co-ordinates of the origin point relative to the width and height of the element
 
 ## Happy hacking
 
