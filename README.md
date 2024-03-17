@@ -63,7 +63,7 @@ const App = () => {
  <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710614736%2Fowsg5apovixvgqlqr5mj.gif&w=1920&q=75"/>
 </div>
 
-## Also comes with
+## Other animation components
 
 ```tsx
   <FadeIn/>
@@ -126,7 +126,7 @@ const App = () => {
 10. **`origin`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">Pop</code> component to set the origin of Pop animation!
 
     - ```ts
-      Predifined values: "center" | "bottom" | "top" | "left" | "right" | "bottom left" | "bottom right" | "bottom center" | "top left" | "top right" | "top center" | "left center" | "right center" | `${number} ${number}`;
+      Predifined values: "center" | "bottom" | "top" | "left" | "right" | "bottom left" | "bottom right" | "top left" | "top right" | `${number} ${number}`;
       ```
     - where `${number} ${number}`: sepcifies customs values you can pass to set the origin of the element that will animate or pop For Eg: `0% 50%`
 
