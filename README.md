@@ -38,7 +38,7 @@ The library comes with two unique category based animation components:
 
 <h3>Lets get jump into first 👇</h3>
 
-<h1>Auto/Inview based animation components Use-sage</h1>
+<h1>Auto/Inview based animation components Usage</h1>
 
 `App.jsx`
 
@@ -203,7 +203,98 @@ export default page;
 
 11. **`delayPerWord`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">TextReveal</code> component to delay of each word of type `number` that are passed as props
 
+<br>
 
+<h3>Lets now take a look into 👇</h3>
+
+<h1>Scroll based animation components Usage</h1>
+
+For now we introduced 3 basic scroll components:
+
+- `<Grow/>`
+- `<Skate/>`
+- `<ProgressBar/>`
+
+## Example with <b>`<Grow/>`</b> component
+
+`App.jsx`
+
+```jsx
+import { Grow } from "react-animate-components-ts";
+
+<div className={styles.posts}>
+  {posts?.map((post, i) => {
+    return (
+      <Grow origin="top left" iGrow={0.7}>
+        {" "}
+        // iGrow(0.7) = Shirk 70% initially and then grow to 100%
+        <BlogCard post={post} key={post._id} />
+      </Grow>
+    );
+  })}
+</div>;
+```
+
+<h1>Result</h1>
+
+<b>Noticed Something 👀</b>
+
+<div align="center">
+ <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710866297%2Fuoju8qbpyrfa6fyovmhj.gif&w=1920&q=75"/>
+</div>
+
+</br>
+
+## Example with <b>`<Skate/>`</b> component!
+
+`App.jsx`
+
+```jsx
+import { Skate } from "react-animate-components-ts";
+
+<div className={styles.posts}>
+  {posts?.map((post, i) => {
+    return (
+      <Skate iSkate={100 * Math.pow(-1, i + 1)}>
+        <BlogCard post={post} key={post._id} />
+      </Skate>
+    );
+  })}
+</div>;
+```
+
+<h1>Result</h1>
+
+<b>Again 👀</b>
+
+<div align="center">
+ <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710866208%2Fksubpxluauv5ghtaaib1.gif&w=1920&q=75"/>
+</div>
+
+<h1>All props</h1>
+
+```ts
+ children: React.ReactNode;
+  iFade?: number;
+  duration?: number;
+  iGrow?:number;
+  iSkate?:number;
+  start?: number;
+  end?: number;
+  origin?:string;
+```
+
+<h1>Props defination</h1>
+
+<code style="color : fuchsia">?</code> **indicates not required or optional property**
+
+1. **`children`**: Your component to animate should wrapped around the animation components that comes straight from react-animate-components-ts
+
+2. **`iFade`**: Initial opacity of the component excepted values ranges between `0` <b> - </b> `1`
+
+3. **`iGrow`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Grow</code> component, Specifies Initial grow/shrink value of the component excepted values ranges between `0` <b> - </b> `1`
+
+4. **`iSkate`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Skate</code> component, Specifies Initial x position of the component value can any number between  `-Infinity` <b> - </b> `Infinity` depending on at what position do you want to start skating on `x-axis`
 ## Happy hacking
 
 ## 🚀 Follow author
