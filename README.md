@@ -295,6 +295,15 @@ import { Skate } from "react-animate-components-ts";
 3. **`iGrow`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Grow</code> component, Specifies Initial grow/shrink value of the component excepted values ranges between `0` <b> - </b> `1`
 
 4. **`iSkate`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Skate</code> component, Specifies Initial x position of the component value can any number between  `-Infinity` <b> - </b> `Infinity` depending on at what position do you want to start skating on `x-axis`
+
+5. **`start`** <code style="color : fuchsia">?</code>:Specifies the percentage at which the animation should begin when the component is within view. For example, if the start is set to `0.2`, it means the animation will begin transitioning when it is `20%` visible on the screen while scrolling. Its default value is `0.1`, indicating that the animation starts when the component is `10%` visible on the screen.
+
+6. **`end`** <code style="color : fuchsia">?</code>: Specifies the percentage of the component visibility at which the animation should end
+  
+    - Note: `start` value should be less <b><</b> then `end` value!
+
+7. **`origin`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">Grow</code> component specifies the origin from which the component should begin to grow! 
+
 ## Happy hacking
 
 ## 🚀 Follow author
