@@ -26,6 +26,11 @@ export type PopProps = Omit<animateProps, "overlayBg"> & {
     | `${number} ${number}`;
 };
 
+export type TextRevealProps = Omit<animateProps, "children" | "overlayBg"> & {
+  words: string[];
+  delayPerWord?: number;
+};
+
 type LeftProps = {
   from: "left";
   left: number;

@@ -31,12 +31,19 @@ yarn add use-axios-http-requests-ts
 <hr/>
 <br>
 
-<h1>Use-sage</h1>
+The library comes with two unique category based animation components:
+
+- Auto/Inview based animation components
+- Scroll based animation components
+
+<h3>Lets get jump into first 👇</h3>
+
+<h1>Auto/Inview based animation components Use-sage</h1>
 
 `App.jsx`
 
 ```tsx
-import { Fill, Reveal, SlideIn } from "react-animate-components-ts";
+import { Fill, Reveal, SlideIn, FadeIn } from "react-animate-components-ts";
 
 const App = () => {
  // not the entrire code this exmaple only shows the animation added to the text or comoponent which are wrapped with the components that comes from react-animate-components-ts package imported above!
@@ -52,6 +59,9 @@ const App = () => {
           Top Story: The Highlight of the Week!
         </h1>
       </SlideIn>
+      <FadeIn delay={1}>
+        <HeroPostCard/>
+      <FadeIn/>
    )
 };
 
@@ -60,15 +70,74 @@ const App = () => {
 <h1>Result</h1>
 
 <div align="center">
- <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710614736%2Fowsg5apovixvgqlqr5mj.gif&w=1920&q=75"/>
+ <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710846751%2Fudvqurjyldoatbbza3nm.gif&w=1920&q=75"/>
+</div>
+<br>
+<br>
+<h1>Special TextReveal component</h1>
+
+```jsx
+import React from "react";
+import styles from "./page.module.css";
+import { TextReveal } from "react-animate-components-ts";
+const words = [
+  "<span style='color:#ff3f3f'>Text</span>",
+  "<span style='color:#ff3f3f'>reveal</span>",
+  "animations",
+  "add",
+  "a",
+  "captivating",
+  "flair",
+  "to",
+  "websites",
+  "gradually",
+  "unveiling",
+  "content",
+  "in",
+  "an",
+  "engaging",
+  "manner",
+  "These",
+  "animations",
+  "intrigue",
+  "users",
+  "drawing",
+  "attention",
+  "to",
+  "key",
+  "information",
+  "and",
+  "creating",
+  "memorable",
+  "browsing",
+  "experiences",
+];
+
+const page = () => {
+  return (
+    <div className={styles.page}>
+      <h1 style={{ fontSize: "3rem" }}>
+        <TextReveal delay={0} words={words} />
+      </h1>
+    </div>
+  );
+};
+
+export default page;
+```
+
+<div align="center">
+ <img src="https://dev-hub-nextjs-app.vercel.app/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fdvzjzf36i%2Fimage%2Fupload%2Fv1710846789%2Fyfuwjn4jfmb3xyvgc6f1.gif&w=1920&q=75"/>
 </div>
 
-## Other animation components
+## Listed are the Auto/Inview based animation components
 
-```tsx
-  <FadeIn/>
-  <Pop/>
-```
+`<FadeIn/>`
+`<Pop/>`
+`<TextReveal/>`
+`<Fill/>`
+`<Reveal/>`
+`<SlideIn/>`
 
 <hr/>
 
@@ -131,6 +200,9 @@ const App = () => {
     - where `${number} ${number}`: sepcifies customs values you can pass to set the origin of the element that will animate or pop For Eg: `0% 50%`
 
     - When you pass a custom value like `0% 50%` to origin prop, it means you are specifying the X and Y co-ordinates of the origin point relative to the width and height of the element
+
+11. **`delayPerWord`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">TextReveal</code> component to delay of each word of type `number` that are passed as props
+
 
 ## Happy hacking
 
