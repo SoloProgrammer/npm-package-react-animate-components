@@ -1,16 +1,21 @@
-"use client"
+"use client";
 import * as React from "react";
 import { motion, useScroll } from "framer-motion";
 import { ProgressBarProps } from "../../../types/types";
 
-const ProgressBar = ({ bg, h, position = "top", origin = "left" }: ProgressBarProps) => {
+const ProgressBar = ({
+  bg,
+  h,
+  position = "top",
+  origin = "left",
+}: ProgressBarProps) => {
   const { scrollYProgress } = useScroll();
 
   return (
     <motion.div
       style={{
         background: bg,
-        height: h,
+        height: `${h}px`,
         position: "fixed",
         width: `100vw`,
         [position]: "0",

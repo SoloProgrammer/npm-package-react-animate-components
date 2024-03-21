@@ -17,19 +17,21 @@ Easy to use animation component library where you can find tons of animation com
 _npm_
 
 ```js
-npm install use-axios-http-requests-ts
+npm install react-animate-components-ts
 ```
 
 _yarn_
 
 ```js
-yarn add use-axios-http-requests-ts
+yarn add react-animate-components-ts
 ```
 
 <br>
 
 <hr/>
 <br>
+
+<h1>Documentation</h1>
 
 The library comes with two unique category based animation components:
 
@@ -261,6 +263,10 @@ import { Skate } from "react-animate-components-ts";
     );
   })}
 </div>;
+
+// Note:
+
+// here iSkate value is provided 100 but it is multipled by (-1) to the power (i + 1) which results in alternate negative/positive values due to which each component adjusted itself by 100px & -100px initialy from x-axixs alternately!
 ```
 
 <h1>Result</h1>
@@ -294,15 +300,55 @@ import { Skate } from "react-animate-components-ts";
 
 3. **`iGrow`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Grow</code> component, Specifies Initial grow/shrink value of the component excepted values ranges between `0` <b> - </b> `1`
 
-4. **`iSkate`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Skate</code> component, Specifies Initial x position of the component value can any number between  `-Infinity` <b> - </b> `Infinity` depending on at what position do you want to start skating on `x-axis`
+4. **`iSkate`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Skate</code> component, Specifies Initial x position of the component value can any number between `-Infinity` <b> - </b> `Infinity` depending on at what position do you want to start skating on `x-axis`
 
-5. **`start`** <code style="color : fuchsia">?</code>:Specifies the percentage at which the animation should begin when the component is within view. For example, if the start is set to `0.2`, it means the animation will begin transitioning when it is `20%` visible on the screen while scrolling. Its default value is `0.1`, indicating that the animation starts when the component is `10%` visible on the screen.
+5. **`start`** <code style="color : fuchsia">?</code>: Value that specifies the percentage at which the animation should begin when the component becomes exposed or visible in the view. For example, if the start is set to `0.2`, it means the animation will begin transitioning when it is `20%` visible on the screen while scrolling. Its default value is `0.1`, indicating that the animation starts when the component is `10%` visible on the screen.
 
 6. **`end`** <code style="color : fuchsia">?</code>: Specifies the percentage of the component visibility at which the animation should end
-  
-    - Note: `start` value should be less <b><</b> then `end` value!
 
-7. **`origin`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">Grow</code> component specifies the origin from which the component should begin to grow! 
+   - Note: `start` value should be less <b><</b> then `end` value!
+
+7. **`origin`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">Grow</code> component specifies the origin from which the component should begin to grow!
+
+   - ```ts
+     Predifined values: "center" | "bottom" | "top" | "left" | "right" | "bottom left" | "bottom right" | "top left" | "top right" | `${number} ${number}`;
+     ```
+<br>
+
+**Introduced a customizable scroll based component `<ProgressBar/>` which shows the scroll progress of your page**
+
+**Just go & add the component into your root layout**
+
+`<ProgressBar/>`
+
+```jsx
+import React from "react";
+import { ProgressBar } from "react-animate-components-ts";
+
+const App = () => {
+  return (
+    <div>
+      {/* Your app component code goes here */}
+      <ProgressBar bg="cyan" h={10} origin="left" position="top" />
+    </div>
+  );
+};
+
+export default App;
+```
+
+## Props
+
+| parameter  | type   | description                                                 | optional |
+| ---------- | ------ | ----------------------------------------------------------- | -------- |
+| `bg`       | string | background-color of progress bar                            | false    |
+| `h`        | number | height in `px`.                                             | false    |
+| `origin`   | string | from which posiiton the progress begins default is **left** | true     |
+| `position` | string | position of your progress bar default is **top**            | true     |
+
+<br/>
+
+_**updated versions will be published soon...**_
 
 ## Happy hacking
 

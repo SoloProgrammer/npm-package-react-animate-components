@@ -73,6 +73,6 @@ export type SkateProps = ScrollProps & {
 
 export type ProgressBarProps = Origin & {
   bg?: string;
-  h?: string;
+  h?: number;
   position?: "top" | "bottom";
 };
