@@ -40,6 +40,7 @@ const TextReveal = ({
     <div ref={ref} style={{ lineHeight: "1.1" }}>
       {words.map((word, i) => (
         <div
+          key={i}
           style={{
             overflow: "hidden",
             marginRight: "8px",

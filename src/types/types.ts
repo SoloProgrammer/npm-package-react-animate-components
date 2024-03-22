@@ -84,4 +84,6 @@ type BottomPosition = {
 export type ProgressBarProps = Origin & {
   bg: string;
   h: number;
+  trackColor?: string;
+  showTrack?: boolean;
 } & (TopPosition | BottomPosition);

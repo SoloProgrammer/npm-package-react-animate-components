@@ -310,10 +310,11 @@ import { Skate } from "react-animate-components-ts";
 
 7. **`origin`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">Grow</code> component specifies the origin from which the component should begin to grow!
 
-   - ```ts
-     Predifined values: "center" | "bottom" | "top" | "left" | "right" | "bottom left" | "bottom right" | "top left" | "top right" | `${number} ${number}`;
-     ```
-<br>
+   - ````ts
+          Predifined values: "center" | "bottom" | "top" | "left" | "right" | "bottom left" | "bottom right" | "top left" | "top right" | `${number} ${number}`;
+          ```
+     <br>
+     ````
 
 **Introduced a customizable scroll based component `<ProgressBar/>` which shows the scroll progress of your page**
 
@@ -339,12 +340,16 @@ export default App;
 
 ## Props
 
-| parameter  | type   | description                                                 | optional |
-| ---------- | ------ | ----------------------------------------------------------- | -------- |
-| `bg`       | string | background-color of progress bar                            | false    |
-| `h`        | number | height in `px`.                                             | false    |
-| `origin`   | string | from which posiiton the progress begins default is **left** | true     |
-| `position` | string | position of your progress bar default is **top**            | true     |
+| parameter    | type    | description                                                                                       | optional |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------- | -------- |
+| `bg`         | string  | background-color of progress bar                                                                  | false    |
+| `h`          | number  | height in `px`                                                                                    | false    |
+| `origin`     | string  | from which posiiton the progress begins default is **left**                                       | true     |
+| `position`   | string  | position of your progress bar default is **top** other one is **bottom**                          | true     |
+| `top`        | number  | value of progressBar from top in **px** if position value is given to **top**. default is 0       | true     |
+| `bottom`     | number  | value of progressBar from bottom in **px** if position value is given to **bottom**. default is 0 | true     |
+| `showTrack`  | boolean | toggle progressbar track visibility                                                               | true     |
+| `trackColor` | string  | trackcolor default = `#f0f2f6`                                                                    | true     |
 
 <br/>
 
