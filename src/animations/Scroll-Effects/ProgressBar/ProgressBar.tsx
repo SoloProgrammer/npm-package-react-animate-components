@@ -40,6 +40,7 @@ const ProgressBar = (props: ProgressBarProps) => {
         background: TRACK_COLOR,
         zIndex: "1300",
         opacity: scrollY > 0 ? 1 : 0,
+        transition:'opacity 0.5s'
       }}
     >
       <motion.div
