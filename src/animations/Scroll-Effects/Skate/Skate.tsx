@@ -27,7 +27,7 @@ const Skate = ({
   const skateValue = useTransform(
     scrollYProgress,
     [0, 1],
-    [initialSkateValue, 1]
+    [initialSkateValue, 0]
   );
   const opacityValue = useTransform(
     scrollYProgress,

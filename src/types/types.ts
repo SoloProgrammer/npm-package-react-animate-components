@@ -71,8 +71,17 @@ export type SkateProps = ScrollProps & {
   iSkate?: number;
 };
 
-export type ProgressBarProps = Origin & {
-  bg?: string;
-  h?: number;
-  position?: "top" | "bottom";
+type TopPosition = {
+  position?: "top";
+  top: number;
 };
+
+type BottomPosition = {
+  position?: "bottom";
+  bottom: number;
+};
+
+export type ProgressBarProps = Origin & {
+  bg: string;
+  h: number;
+} & (TopPosition | BottomPosition);

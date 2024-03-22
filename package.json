@@ -1,6 +1,6 @@
 {
   "name": "react-animate-components-ts",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "React Animation components library",
   "main": "dist/index.js",
   "type": "module",

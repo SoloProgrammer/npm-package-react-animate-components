@@ -8,7 +8,7 @@ import { TextRevealProps } from "../../types/types";
 const TextReveal = ({
   words,
   duration = 0.8,
-  delay = 1,
+  delay = 0,
   delayPerWord = 0.02,
   revealInView = true,
   animateOnce = true,
