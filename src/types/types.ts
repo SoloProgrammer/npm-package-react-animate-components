@@ -26,7 +26,8 @@ type Origin = {
 export type RevealProps = animateProps;
 export type FillProps = animateProps & { animateFrom?: "right" | "left" };
 export type FadeInProps = Omit<animateProps, "overlayBg">;
-export type PopProps = Omit<animateProps, "overlayBg"> & Origin;
+export type PopProps = Omit<animateProps, "overlayBg"> &
+  Origin & { iPop: number };
 export type TextRevealProps = Omit<animateProps, "children" | "overlayBg"> & {
   words: string[];
   delayPerWord?: number;

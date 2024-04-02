@@ -16,7 +16,7 @@ const ProgressBar = (props: ProgressBarProps) => {
 
   const [scrollY, setScroll] = useState<number>(scrollYProgress.get());
 
-  const MIN_SCROLL_INDEX = 0.0015;
+  const MIN_SCROLL_INDEX = 0.1;
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (latest > 0 && latest < MIN_SCROLL_INDEX) {
       setScroll(scrollYProgress.get());

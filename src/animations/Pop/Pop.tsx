@@ -8,13 +8,14 @@ const Pop = ({
   children,
   delay = 0,
   duration = 0.5,
+  iPop = 0.5,
   animateOnce = true,
   revealInView = true,
   origin = "center",
 }: PopProps) => {
   const PopVariants = {
     initial: {
-      scale: 0.2,
+      scale: iPop,
       transformOrigin: origin,
     },
     [revealInView ? "inview" : "animate"]: {

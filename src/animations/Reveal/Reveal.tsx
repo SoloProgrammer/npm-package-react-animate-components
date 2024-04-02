@@ -50,7 +50,8 @@ const Reveal = ({
     [revealInView ? "inview" : "animate"]: {
       left: "100%",
       transition: {
-        duration: 1,
+        ease: "easeIn",
+        duration,
         delay,
       },
     },

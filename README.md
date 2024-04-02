@@ -156,8 +156,9 @@ export default page;
   from: string;
   left: number;
   right: number;
-  type: string
-  origin: string
+  type: string;
+  origin: string;
+  iPop:number;
 ```
 
 <h1>Props defination</h1>
@@ -204,6 +205,8 @@ export default page;
     - When you pass a custom value like `0% 50%` to origin prop, it means you are specifying the X and Y co-ordinates of the origin point relative to the width and height of the element
 
 11. **`delayPerWord`** <code style="color : fuchsia">?</code>: Special prop for <code style="color : cyan">TextReveal</code> component to delay of each word of type `number` that are passed as props
+
+12. **`iPop`** <code style="color : fuchsia">?</code> : Special prop for <code style="color : cyan">Pop</code> component, Specifies Initial Pop (how much the component initially scale down or low in size) value of the component excepted values ranges between `0` <b> - </b> `1`
 
 <br>
 
